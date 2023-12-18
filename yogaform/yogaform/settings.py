@@ -31,7 +31,7 @@ SECURE_SSL_REDIRECT=False #comment this in local server
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG=False     #turn this on in local server
+DEBUG=True     #turn this on in local server
 SECURE_HSTS_SECONDS = 60 #comment this in local server
 SECURE_HSTS_INCLUDE_SUBDOMAINS=True #comment this in local server
 SECURE_HSTS_PRELOAD=True  #comment this in local server
