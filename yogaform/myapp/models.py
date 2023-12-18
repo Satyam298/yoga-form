@@ -26,7 +26,7 @@ class User(models.Model):
     batch=models.ForeignKey('Batch',on_delete=models.CASCADE,null=False)
 
 class Batch(models.Model):
-    batch_id=models.IntegerField(primary_key=True)
+    batch_id=models.AutoField(primary_key=True)
     SESSION_CHOICES = (
         ('M1', '6-7 AM'),
         ('M2', '7-8 AM'),
