@@ -27,10 +27,10 @@ class FormSerializer(serializers.Serializer):
         obj=User.objects.filter(email=e)[0]
         u_id=obj
         Payment.objects.create(user_id=u_id,amount=amt,payment_successful=p)
-        url_test = 'https://web-production-7af1.up.railway.app/completePayment'
+        url_test = 'https://yoga-form-production.up.railway.app/completePayment'
         send_mail('Yoga For Life - Payment Link',
-        'Dear '+f_name+',\n\nThanks for enrolling in our yoga class.\nCharges: Rs 500/month\nKindly make the payment with the link given below. You can make the payment within 30 days of enrolment to confirm your admission.\n\nLink:'+url_test+'\n\nThank you and see you soon:)\n\nBest,\nSanya',
-        'zaverisanya@gmail.com',[e],fail_silently=True)
+        'Dear '+f_name+',\n\nThanks for enrolling in our yoga class.\nCharges: Rs 500/month\nKindly make the payment with the link given below. You can make the payment within 30 days of enrolment to confirm your admission.\n\nLink:'+url_test+'\n\nThank you and see you soon:)\n\nBest,\nSam',
+        'sam@gmail.com',[e],fail_silently=True)
         if(p=='True'):
             o=Payment.objects.filter(user_id=u_id)[0]
             p_id=o
@@ -50,10 +50,10 @@ class UpdateSerializer(serializers.Serializer):
         obj=User.objects.filter(email=e)[0]   
         u_id=obj
         Payment.objects.create(user_id=u_id,amount=amt,payment_successful=p)
-        url_test = 'https://web-production-7af1.up.railway.app/completePayment'
+        url_test = 'https://yoga-form-production.up.railway.app/completePayment'
         send_mail('Yoga For Life - Payment Link',
-       'Hey,\n\nThanks for enrolling in our yoga class once again.\nCharges: Rs 500/month\nKindly make the payment with the link given below. You can make the payment within 30 days of enrolment to confirm your admission.\n\nLink: '+url_test+'\n\nThank you and see you soon:)\n\nBest,\nSanya',
-        'zaverisanya@gmail.com',[e],fail_silently=True)
+       'Hey,\n\nThanks for enrolling in our yoga class once again.\nCharges: Rs 500/month\nKindly make the payment with the link given below. You can make the payment within 30 days of enrolment to confirm your admission.\n\nLink: '+url_test+'\n\nThank you and see you soon:)\n\nBest,\nSam',
+        'sam@gmail.com',[e],fail_silently=True)
         if(p=='True'):
             o=Payment.objects.filter(user_id=u_id)[0]
             p_id=o
