@@ -11,7 +11,7 @@ document.getElementById("formdata").addEventListener("submit",function(e){
         formData.append('payment_successful',payment_successful);
         console.log(formData);
 
-        fetch('https://web-production-7af1.up.railway.app/update',{
+        fetch('yoga-form-production.up.railway.app/update',{
             method:'POST',
             body:formData,
         })
