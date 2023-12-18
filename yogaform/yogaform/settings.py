@@ -36,7 +36,7 @@ SECURE_HSTS_SECONDS = 60 #comment this in local server
 SECURE_HSTS_INCLUDE_SUBDOMAINS=True #comment this in local server
 SECURE_HSTS_PRELOAD=True  #comment this in local server
 
-ALLOWED_HOSTS = ['yoga-form-production.up.railway.app','127.0.0.1']
+ALLOWED_HOSTS = ['https://yoga-form-production.up.railway.app','127.0.0.1']
 
 # CORS_ALLOWED_ORIGINS = ['*']
 # # Application definition
@@ -96,7 +96,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 # CORS_ALLOWED_ORIGINS= [  #uncomment for local server
 #   'http://localhost:8000',
 # ]
-CSRF_TRUSTED_ORIGINS = ['yoga-form-production.up.railway.app',]
+CSRF_TRUSTED_ORIGINS = ['https://yoga-form-production.up.railway.app',]
 # CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000'] #uncomment for local server
 
 CORS_ALLOW_METHODS = [
