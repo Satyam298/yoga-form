@@ -6,8 +6,8 @@ from .models import *
 from .serializers import FormSerializer, UpdateSerializer
 from django.http import HttpResponse
 
-def completePayment(request):
-    return HttpResponse('Payment Successful')
+# def completePayment(request):
+#     return HttpResponse('Payment Successful')
 
 @api_view(['GET','POST'])
 def yogaform(request):
@@ -27,4 +27,10 @@ def updateform(request):
            UpdateSerializer.save(request.data)
            return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
+    return HttpResponse('OK')
+
+@api_view(['POST'])
+def completePayment(request):
+    if request.method == 'POST':
+        return HttpResponse('Payment Successful')
     return HttpResponse('OK')
