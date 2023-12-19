@@ -29,7 +29,7 @@ def updateform(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
     return HttpResponse('OK')
 
-@api_view(['POST'])
+@api_view(['GET','POST'])
 def completePayment(request):
     if request.method == 'POST':
         return HttpResponse('Payment Successful')
